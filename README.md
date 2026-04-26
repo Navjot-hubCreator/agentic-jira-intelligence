@@ -3,7 +3,7 @@ AI-powered multi-agent system for Jira intelligence, risk assessment, and execut
 > 
 An AI-powered multi-agent system that analyzes Jira tickets to improve requirement clarity, estimate delivery effort, assess regulatory risk, and drive data-driven execution decisions.
 
-## 🚀 Key Value Proposition
+## Key Value Proposition
 
 This project simulates a real-world **AI-powered delivery organization**, where multiple specialized agents collaborate to transform unstructured Jira tickets into **structured, decision-ready insights**.
 
@@ -20,7 +20,7 @@ This project demonstrates how agent-based AI systems can enhance software delive
 
 The system uses multiple specialized agents to simulate roles typically performed by Business Analysts, Project Managers, Risk Analysts, and Delivery Leads.
 
-## 💼 Real-World Relevance
+## Real-World Relevance
 
 This system is directly applicable to enterprise roles such as:
 

@@ -123,41 +123,6 @@ Streamlit Dashboard (Visualization Layer)
         │ Charts + Metrics     │
         └──────────────────────┘
 ```
----
-
-                ┌──────────────────────┐
-                │   Streamlit UI       │
-                │ (Single / Portfolio) │
-                └─────────┬────────────┘
-                          │
-                          ▼
-                ┌──────────────────────┐
-                │   Orchestrator       │
-                │ (app.py controller)  │
-                └─────────┬────────────┘
-                          │
-      ┌───────────────────┼───────────────────┐
-      ▼                   ▼                   ▼
-┌────────────┐   ┌────────────┐   ┌────────────┐
-│ BA Agent   │   │ PM Agent   │   │ Risk Agent │
-└────┬───────┘   └────┬───────┘   └────┬───────┘
-     │                │                │
-     ▼                ▼                ▼
-        ┌────────────────────────┐
-        │     Knowledge Layer    |
-        |   Extensible for RAG   │
-        │                        │
-        └─────────┬──────────────┘
-                  ▼
-        ┌──────────────────────┐
-        │ Decision Engine      │
-        │ Priority + Effort    │
-        └─────────┬────────────┘
-                  ▼
-        ┌──────────────────────┐
-        │ Executive Dashboard  │
-        │ Charts + Metrics     │
-        └──────────────────────┘
 
 ## Agent Responsibilities
 

@@ -339,6 +339,4 @@ AI and Risk Systems | FinTech | Regulatory Technology
 
 ---
 
-## License
 
-This project is for demonstration and educational purposes.

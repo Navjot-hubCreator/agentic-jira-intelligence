@@ -66,28 +66,63 @@ All outputs are presented through a structured dashboard designed for both engin
 ## System Architecture
 
 
+## System Architecture
 
+```
 Jira Ticket Input
-|
-v
+      │
+      ▼
 Business Analyst Agent (Requirement Clarity)
-|
-v
+      │
+      ▼
 Project Manager Agent (Effort Estimation)
-|
-v
+      │
+      ▼
 Risk Agent (AML / GDPR / SEC Risk Assessment)
-|
-v
+      │
+      ▼
 Priority Agent (Business Impact Scoring)
-|
-v
+      │
+      ▼
 Decision Engine (Execution Recommendation)
-|
-v
+      │
+      ▼
 Streamlit Dashboard (Visualization Layer)
 
 
+                ┌──────────────────────┐
+                │   Streamlit UI       │
+                │ (Single / Portfolio) │
+                └─────────┬────────────┘
+                          │
+                          ▼
+                ┌──────────────────────┐
+                │   Orchestrator       │
+                │ (app.py controller)  │
+                └─────────┬────────────┘
+                          │
+      ┌───────────────────┼───────────────────┐
+      ▼                   ▼                   ▼
+┌────────────┐   ┌────────────┐   ┌────────────┐
+│ BA Agent   │   │ PM Agent   │   │ Risk Agent │
+└────┬───────┘   └────┬───────┘   └────┬───────┘
+     │                │                │
+     ▼                ▼                ▼
+        ┌──────────────────────────┐
+        │ Knowledge Layer          │
+        │ (Extensible for RAG)     │
+        └─────────┬──────────────┘
+                  ▼
+        ┌──────────────────────┐
+        │ Decision Engine      │
+        │ Priority + Effort    │
+        └─────────┬────────────┘
+                  ▼
+        ┌──────────────────────┐
+        │ Executive Dashboard  │
+        │ Charts + Metrics     │
+        └──────────────────────┘
+```
 ---
 
                 ┌──────────────────────┐

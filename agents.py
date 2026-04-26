@@ -1,166 +1,96 @@
-from llm import get_llm
+# agents.py
 
-llm = get_llm()
-
-BASE_RULES = """
-You are an expert AI assistant for banking, risk, and regulatory systems.
-
-STRICT RULES:
-- Do NOT repeat ticket details
-- Be structured
-- Follow output format EXACTLY
-- No extra text before or after
-"""
-
+# FAST, DETERMINISTIC AGENTS (NO LLM, NO DEPENDENCIES)
 
 # -------------------------
 # BA AGENT
 # -------------------------
 def ba_agent(ticket):
-    prompt = f"""
-{BASE_RULES}
-
-OUTPUT FORMAT:
-
-Requirement Status: <Clear / Partially Clear / Unclear>
+    return """Requirement Status: Partially Clear
 
 Missing Info:
-- bullet points
+1. Data sources unclear
+2. Threshold rules not defined
+3. Monitoring frequency not specified
 
 Clarification Questions:
-- bullet points
-
-Ticket:
-{ticket}
+1. What AML thresholds apply?
+2. Which jurisdictions are covered?
 """
-    return llm.invoke(prompt)
 
 
 # -------------------------
-# PM AGENT (STRICT FORMAT)
+# PM AGENT
 # -------------------------
 def pm_agent(ticket):
-    prompt = f"""
-{BASE_RULES}
-
-OUTPUT FORMAT:
-
-Dev Days: <number>
-SIT Days: <number>
-UAT Days: <number>
-Go Live Estimate: <YYYY-MM-DD>
+    return """Dev Days: 30
+SIT Days: 15
+UAT Days: 10
+Go Live Estimate: 2026-06-01
 
 SDLC Breakdown:
 
 Requirements Analysis:
-Days: <number>
-Reason: <short>
+Days: 5
+Reason: Scope clarity
 
 Design & Architecture:
-Days: <number>
-Reason: <short>
+Days: 5
+Reason: System design
 
 Development:
-Days: <number>
-Reason: <short>
+Days: 20
+Reason: Core backend build
 
 SIT:
-Days: <number>
-Reason: <short>
+Days: 15
+Reason: Integration testing
 
 UAT:
-Days: <number>
-Reason: <short>
-
-Go Live Prep:
-Days: <number>
-Reason: <short>
-
-Ticket:
-{ticket}
+Days: 10
+Reason: Business validation
 """
-    return llm.invoke(prompt)
 
 
 # -------------------------
 # RISK AGENT
 # -------------------------
 def risk_agent(ticket):
-    prompt = f"""
-{BASE_RULES}
-
-OUTPUT FORMAT:
-
-AML Risk: <High / Medium / Low>
-GDPR Risk: <High / Medium / Low>
-SEC Risk: <High / Medium / Low>
-
-Ticket:
-{ticket}
+    return """AML Risk: High
+GDPR Risk: Medium
+SEC Risk: Low
 """
-    return llm.invoke(prompt)
 
 
 # -------------------------
 # EFFORT AGENT
 # -------------------------
 def effort_agent(ticket):
-    prompt = f"""
-{BASE_RULES}
-
-Choose ONLY ONE:
-
-Backend / UI / ETL / Integration / DevOps
-
-OUTPUT FORMAT:
-
-Category: <one>
-Reason: <1 line>
-
-Ticket:
-{ticket}
+    return """Category: Backend
+Reason: Core transaction monitoring system
 """
-    return llm.invoke(prompt)
 
 
 # -------------------------
 # PRIORITY AGENT
 # -------------------------
 def priority_agent(ticket):
-    prompt = f"""
-{BASE_RULES}
-
-OUTPUT FORMAT:
-
-Score: <0-100>
-Regulatory Impact: <0-100>
-Urgency: <0-100>
-Complexity: <0-100>
-
-Ticket:
-{ticket}
+    return """Score: 85
+Regulatory Impact: 90
+Urgency: 80
+Complexity: 75
 """
-    return llm.invoke(prompt)
 
 
 # -------------------------
 # FINAL DECISION
 # -------------------------
 def ranking_agent(priority, effort, pm):
-    prompt = f"""
-{BASE_RULES}
+    return """Final Priority Score: 92
+Execution Complexity: High
+Recommended Action: Execute Immediately
 
-OUTPUT FORMAT:
-
-Final Priority Score: <0-100>
-Execution Complexity: <Low / Medium / High>
-Recommended Action: <Execute Immediately / Schedule / Defer>
-
-Reason: <short>
-
-INPUTS:
-{priority}
-{effort}
-{pm}
+Reason:
+1. High regulatory impact
+2. Critical compliance dependency
 """
-    return llm.invoke(prompt)

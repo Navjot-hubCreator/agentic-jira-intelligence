@@ -1,7 +1,17 @@
 # Agentic Jira Intelligence System
-
+AI-powered multi-agent system for Jira intelligence, risk assessment, and execution decisioning in FinTech environments.
+> 
 An AI-powered multi-agent system that analyzes Jira tickets to improve requirement clarity, estimate delivery effort, assess regulatory risk, and drive data-driven execution decisions.
 
+## 🚀 Key Value Proposition
+
+This project simulates a real-world **AI-powered delivery organization**, where multiple specialized agents collaborate to transform unstructured Jira tickets into **structured, decision-ready insights**.
+
+It demonstrates how AI can:
+- Replace manual triage workflows
+- Standardize effort estimation and prioritization
+- Surface regulatory risks early in the lifecycle
+- Enable leadership-level decision-making through structured outputs
 ---
 
 ## Overview
@@ -10,6 +20,20 @@ This project demonstrates how agent-based AI systems can enhance software delive
 
 The system uses multiple specialized agents to simulate roles typically performed by Business Analysts, Project Managers, Risk Analysts, and Delivery Leads.
 
+## 💼 Real-World Relevance
+
+This system is directly applicable to enterprise roles such as:
+
+- AI Product Manager
+- AI Delivery Lead
+- Risk & Compliance Technology Analyst
+- FinTech / RegTech Architect
+
+It demonstrates the ability to:
+- Design multi-agent AI systems
+- Translate business workflows into AI pipelines
+- Build decision intelligence dashboards
+- Bridge engineering, risk, and product functions
 ---
 
 ## Problem Statement
@@ -84,9 +108,10 @@ Streamlit Dashboard (Visualization Layer)
 └────┬───────┘   └────┬───────┘   └────┬───────┘
      │                │                │
      ▼                ▼                ▼
-        ┌──────────────────────────┐
-        │     RAG Layer           │
-        │ (Regulatory Knowledge)  │
+        ┌────────────────────────┐
+        │     Knowledge Layer    |
+        |   Extensible for RAG   │
+        │                        │
         └─────────┬──────────────┘
                   ▼
         ┌──────────────────────┐
@@ -252,7 +277,20 @@ Result:
 - Faster delivery cycles
 
 ---
+## Key Design Decisions
 
+- Used a modular multi-agent architecture to mirror real enterprise workflows
+- Prioritized structured outputs over free-form LLM responses for consistency
+- Avoided RAG in the current version to ensure speed and stability
+- Designed stateless agents for simplicity and scalability
+- Focused UI on executive readability, not just technical output
+
+These decisions ensure:
+- Faster execution
+- Easier debugging
+- Better real-world adoption potential
+
+---
 ## Future Enhancements
 
 - Retrieval-Augmented Generation (RAG) for regulatory knowledge grounding
@@ -271,6 +309,19 @@ Result:
 - Risk scoring is heuristic-based
 
 ---
+
+## Resume Impact
+
+This project demonstrates:
+
+- End-to-end AI system design
+- Multi-agent orchestration
+- Business + technical alignment
+- Real-world FinTech / Risk use case
+
+Positioning statement:
+
+Built an AI-powered multi-agent system for Jira intelligence, enabling risk-aware prioritization and structured delivery decision-making
 
 ## Author
 

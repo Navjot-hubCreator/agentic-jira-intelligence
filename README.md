@@ -66,28 +66,38 @@ All outputs are presented through a structured dashboard designed for both engin
 ## System Architecture
 
 
-## System Architecture
-
 ```
 Jira Ticket Input
       │
       ▼
-Business Analyst Agent (Requirement Clarity)
+┌──────────────────────────────────────────────┐
+│ Business Analyst Agent (Requirement Clarity) │
+└──────────────────────────────────────────────┘
       │
       ▼
-Project Manager Agent (Effort Estimation)
+┌──────────────────────────────────────────────┐
+│ Project Manager Agent (Effort Estimation)    │
+└──────────────────────────────────────────────┘
       │
       ▼
-Risk Agent (AML / GDPR / SEC Risk Assessment)
+┌──────────────────────────────────────────────┐
+│ Risk Agent (AML / GDPR / SEC Risk Assessment)│
+└──────────────────────────────────────────────┘
       │
       ▼
-Priority Agent (Business Impact Scoring)
+┌──────────────────────────────────────────────┐
+│ Priority Agent (Business Impact Scoring)     │
+└──────────────────────────────────────────────┘
       │
       ▼
-Decision Engine (Execution Recommendation)
+┌──────────────────────────────────────────────┐
+│ Decision Engine (Execution Recommendation)   │
+└──────────────────────────────────────────────┘
       │
       ▼
-Streamlit Dashboard (Visualization Layer)
+┌──────────────────────────────────────────────┐
+│ Streamlit Dashboard (Visualization Layer)    │
+└──────────────────────────────────────────────┘
 
 
                 ┌──────────────────────┐
@@ -108,22 +118,21 @@ Streamlit Dashboard (Visualization Layer)
 └────┬───────┘   └────┬───────┘   └────┬───────┘
      │                │                │
      ▼                ▼                ▼
-        ┌──────────────────────────┐
-        │ Knowledge Layer          │
-        │ (Extensible for RAG)     │
-        └─────────┬──────────────┘
-                  ▼
-        ┌──────────────────────┐
-        │ Decision Engine      │
-        │ Priority + Effort    │
-        └─────────┬────────────┘
-                  ▼
-        ┌──────────────────────┐
-        │ Executive Dashboard  │
-        │ Charts + Metrics     │
-        └──────────────────────┘
+        ┌──────────────────────────────┐
+        │ Knowledge Layer              │
+        │ (Extensible for RAG)         │
+        └──────────────┬───────────────┘
+                       ▼
+        ┌──────────────────────────────┐
+        │ Decision Engine              │
+        │ Priority + Effort            │
+        └──────────────┬───────────────┘
+                       ▼
+        ┌──────────────────────────────┐
+        │ Executive Dashboard          │
+        │ Charts + Metrics             │
+        └──────────────────────────────┘
 ```
-
 ## Agent Responsibilities
 
 ### Business Analyst Agent

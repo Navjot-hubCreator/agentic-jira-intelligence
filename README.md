@@ -454,7 +454,7 @@ A Jira ticket contains subtle GDPR-sensitive data handling logic embedded in req
 
 ---
 
-## 23.5 Engineering Insight
+## 23.5 Key Governance Insight
 
 > In multi-agent AI systems, correctness is not binary — it is distributed across layers of partial truth.
 
@@ -466,11 +466,11 @@ It is:
 
 ---
 
-## 23.6 System-Level Design Principles
+## 23.6 Design Principles
 
 This project demonstrates capabilities expected in senior AI / platform roles:
 
-### 1. System Thinking (Not Model Thinking)
+### 1. System Thinking 
 - Treats agents as distributed cognitive components
 - Focuses on system-level failure modes
 
@@ -488,7 +488,7 @@ This project demonstrates capabilities expected in senior AI / platform roles:
 
 ---
 
-## 23.7 Architectural Priorities Under Real‑World Failure Conditions
+## 23.7 Architectural Priorities 
 
 > This system is designed under the assumption that AI failures in production are rarely obvious — they are gradual, distributed, and only visible through governance-aware evaluation layers.
 

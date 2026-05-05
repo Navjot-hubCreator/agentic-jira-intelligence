@@ -468,7 +468,6 @@ It is:
 
 ## 23.6 Design Principles
 
-This project demonstrates capabilities expected in senior AI / platform roles:
 
 ### 1. System Thinking 
 - Treats agents as distributed cognitive components

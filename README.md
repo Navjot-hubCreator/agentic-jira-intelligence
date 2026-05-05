@@ -151,216 +151,200 @@ Jira Ticket Input
         │ Charts + Metrics             │
         └──────────────────────────────┘
 ```
-## 6.1 Evaluation & Governance Layer (NEW — Production Enhancement)
-
-To ensure this system is not just functional but **governed in a production-realistic manner**, an evaluation layer is introduced above all agent outputs.
-
-This layer does NOT generate decisions — it evaluates the reliability of decisions produced by agents.
-
-                    ┌──────────────────────────────┐
-                    │ Evaluation & Governance Layer │
-                    │ (Quality + Risk Validator)    │
-                    └──────────────┬───────────────┘
-                                   │
-        ┌──────────────────────────┼──────────────────────────┐
-        ▼                          ▼                          ▼
-┌────────────────┐     ┌──────────────────┐     ┌────────────────────┐
-│ Consistency     │     │ Risk Validator   │     │ Decision Drift     │
-│ Checker         │     │ (AML/GDPR/SEC)   │     │ Detector           │
-└────────────────┘     └──────────────────┘     └────────────────────┘
-
-Evaluation Responsibilities
-1. Consistency Checker
-Detects contradiction between agent outputs
-Flags unstable or conflicting reasoning chains
-2. Risk Validator
-Validates whether risk classification is complete
-Ensures regulatory signals are not missed or underweighted
-3. Decision Drift Detector
-Tracks whether similar Jira inputs produce inconsistent outputs over time
-Identifies instability in prioritisation logic
-Why this layer matters
-
-Without this layer:
-
-system appears correct but may be internally inconsistent
-agent outputs can drift without detection
-prioritisation errors remain hidden
-
-With this layer:
-
-system becomes auditable
-system becomes testable
-system becomes governance-aligned
-
-This transforms the system from “multi-agent pipeline” → “governed decision intelligence system”
-
 
 ---
 
-## 7. Governance Design Principle (Critical)
-
-This system is built on a key principle:
+## 7. Governance Design Principle
 
 > AI structures decisions — it does NOT own decisions.
 
 ### Allowed:
-- estimation
 - classification
+- estimation
 - risk detection
 - prioritisation suggestion
 
-### Not allowed:
-- final approval of work
-- enforcement of delivery timelines
-- autonomous execution decisions
+### Not Allowed:
+- final execution authority
+- delivery commitment
+- autonomous decision enforcement
 
 ---
 
-## 8. Critical Governance Insight (Production Learning)
+## 8. Evaluation & Governance Control Layer (CORE SYSTEM SAFETY COMPONENT)
 
-During system design and testing, a key risk pattern was identified:
+The system includes a dedicated **Evaluation & Governance Control Layer** that validates all agent outputs before they are consumed for decision-making.
 
-### 🔴 Agent Amplification Risk
-
-Small biases in early-stage agents (e.g. requirement interpretation or effort estimation) can:
-- propagate downstream
-- amplify through prioritisation logic
-- produce confident but skewed execution recommendations
-
-### Why this matters:
-The system may appear consistent and logical, while still producing **systematically distorted decisions**.
+This layer ensures the system is not just multi-agent, but **auditable, testable, and production-governed**.
 
 ---
 
-## 9. Mitigation Controls Introduced
+### 8.1 Evaluation Layer Architecture
+            ┌──────────────────────────────┐
+            │ Evaluation & Governance Layer │
+            └──────────────┬───────────────┘
+                           │
+    ┌──────────────────────┼──────────────────────┐
+    ▼                      ▼                      ▼
+    Consistency Checker Risk Completeness Validator Decision Drift Detector
 
-To address this, the system includes:
-
-### 1. Explicit disagreement handling
-- conflicting agent outputs are preserved, not hidden
-
-### 2. Confidence scoring per agent
-- each output includes uncertainty signal
-
-### 3. Human escalation trigger
-- low-confidence or high-disagreement cases require review
 
 ---
 
-## 10. Risk Classification
+### 8.2 Evaluation Responsibilities
 
-Key risks include:
+#### 1. Consistency Checker
+- detects contradictions across agent outputs
+- flags conflicting reasoning chains
+- prevents silent logic overwrites
+
+---
+
+#### 2. Risk Completeness Validator
+- ensures AML / GDPR / SEC signals are not missed
+- validates risk coverage completeness
+- detects underweighted compliance risks
+
+---
+
+#### 3. Decision Drift Detector
+- tracks consistency across similar Jira inputs
+- detects instability in prioritisation logic
+- identifies systemic model drift
+
+---
+
+### 8.3 Why This Layer is Critical
+
+Without this layer:
+- system may appear correct but be internally inconsistent
+- hidden reasoning errors propagate downstream
+- prioritisation decisions become unstable over time
+
+With this layer:
+- system becomes **auditable**
+- system becomes **testable**
+- system becomes **governance-grade**
+
+---
+
+## 9. Critical Production Insight
+
+> In multi-agent systems, failure does NOT originate in one agent — it emerges from aggregation.
+
+Key risk pattern:
+- small upstream errors → amplify downstream
+- prioritisation layer can over-trust weak signals
+- system may appear logically consistent but be systematically biased
+
+---
+
+## 10. Mitigation Controls
+
+- disagreement preservation (no forced override)
+- confidence scoring per agent
+- escalation triggers for low-confidence outputs
+- human-in-loop override for high-risk tickets
+
+---
+
+## 11. Risk Classification
+
 - automation bias in decision-making
-- hidden propagation of estimation errors
-- over-reliance on AI prioritisation
-- lack of decision accountability clarity
-- regulatory misclassification of work items
+- hidden estimation propagation errors
+- prioritisation distortion risk
+- regulatory misclassification risk
+- lack of accountability clarity
 
 ---
 
-## 11. Governance Framework Alignment
+## 12. Governance Framework Alignment
 
-- NIST AI RMF (Govern, Map, Measure, Manage)
-- SR 11-7 aligned model risk thinking
-- EU AI Act high-level decision support principles
+- NIST AI RMF (Govern / Map / Measure / Manage)
+- SR 11-7 model risk principles
+- EU AI Act high-risk decision support logic
 - ISO 42001 AI management concepts
 
 ---
 
-## 12. AI Lifecycle Governance
+## 13. AI Lifecycle Governance
 
 ### Inception
 - defined as decision support system
-- established human accountability boundary
+- human accountability explicitly assigned
 
 ### Design
 - decomposed enterprise roles into agents
-- structured workflow pipeline design
+- structured workflow pipeline defined
 
 ### Build
-- constrained prompt design
-- structured output enforcement
+- structured output constraints applied
+- isolated agent reasoning chains
 
 ### Aggregation Layer
-- weighted decision fusion
-- conflict detection logic
-- uncertainty flagging system
+- weighted fusion logic
+- conflict detection system
+- uncertainty propagation flags
 
 ---
 
-## 13. Evaluation & Testing
+## 14. Evaluation & Stress Testing
 
-### Independent Testing
+### Scenarios Tested
 - ambiguous Jira tickets
 - conflicting stakeholder requirements
 - incomplete specifications
-- adversarial or manipulated inputs
-
-### Stress Testing Scenarios
-- requirement inflation
-- contradictory priorities
-- missing acceptance criteria
-- compliance-sensitive tickets
+- adversarial input manipulation
+- compliance-heavy tickets
 
 ---
 
-## 14. Explainability
+## 15. Explainability Layer
 
 Each output includes:
-- agent-level reasoning trace
-- confidence scoring
+- agent reasoning trace
+- confidence score per agent
 - risk classification rationale
 - decision breakdown
 - aggregation logic summary
 
 ---
 
-## 15. Control Framework
-
-| Control Type | Implementation |
-|--------------|----------------|
-| Preventive | structured prompts, schema constraints |
-| Detective | logging, disagreement detection |
-| Corrective | human-in-loop override |
-
----
-
-## 16. Monitoring
+## 16. Monitoring Framework
 
 - decision drift tracking
 - agent consistency monitoring
-- risk detection evaluation
+- risk detection recall measurement
 - periodic recalibration of scoring logic
 
 ---
 
 ## 17. Human Accountability Model
 
-Final responsibility always remains with:
+Final accountability remains with:
 
-> Engineering Lead / Delivery Manager
+> Engineering / Delivery Leadership
 
-AI provides structured intelligence only — not authority.
+AI provides structured intelligence only.
 
 ---
 
 ## 18. Business Impact
 
+- faster Jira triage
 - improved requirement clarity
-- faster triage and prioritisation
-- early detection of regulatory risks
-- consistent effort estimation
-- improved delivery transparency
+- earlier compliance detection
+- consistent prioritisation logic
+- improved portfolio visibility
 
 ---
 
 ## 19. Future Enhancements
 
-- RAG-based regulatory knowledge grounding
-- Jira API integration for live ingestion
-- advanced portfolio analytics
-- adaptive prioritisation learning layer
+- RAG-based regulatory grounding
+- Jira API live integration
+- adaptive prioritisation learning
+- portfolio intelligence layer
 
 ---
 
@@ -370,7 +354,7 @@ AI provides structured intelligence only — not authority.
 - Streamlit
 - Pandas
 - LangChain
-- LLMs (OpenAI / Ollama compatible)
+- LLM APIs (OpenAI / Ollama)
 
 ---
 
@@ -380,13 +364,13 @@ This project demonstrates:
 
 - multi-agent AI system design
 - governed decision intelligence architecture
-- FinTech + regulatory workflow understanding
-- structured AI engineering thinking
-- production-oriented AI governance mindset
+- FinTech risk-aware AI workflows
+- production-grade AI governance thinking
+- enterprise system design capability
 
 ---
 
 ## 22. Author
 
 Navjot Perhar  
-AI Systems | FinTech | Risk & Governance AI
+AI Systems | FinTech | Risk & Governance AI    

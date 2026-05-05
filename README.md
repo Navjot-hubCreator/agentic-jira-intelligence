@@ -361,13 +361,13 @@ AI provides structured intelligence only.
 
 ## 23. Production Readiness, Failure Modes & Model Risk Signals
 
-This section detailes the production-grade governed AI system design artifacts 
+This section details the production-grade governed AI system design artifacts 
 
 ---
 
 ## 23.1 System Failure Mode Analysis 
 
-In real-world enterprise deployments, AI system failures rarely occur as complete breakdowns. Instead, they emerge as **subtle degradation patterns**.
+In enterprise deployments, AI system failures rarely occur as complete breakdowns. Instead, they emerge as **subtle degradation patterns**.
 
 ### Key Failure Modes Identified
 

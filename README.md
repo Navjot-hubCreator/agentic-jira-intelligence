@@ -357,31 +357,15 @@ AI provides structured intelligence only.
 - LLM APIs (OpenAI / Ollama)
 
 ---
+ 
 
-## 21. Resume Positioning
-
-This project demonstrates:
-
-- multi-agent AI system design
-- governed decision intelligence architecture
-- FinTech risk-aware AI workflows
-- production-grade AI governance thinking
-- enterprise system design capability
-
----
-
-## 22. Author
-
-Navjot Perhar  
-AI Systems | FinTech | Risk & Governance AI    
-
-## 23. Senior FAANG Signal Layer — Production Readiness, Failure Modes & Model Risk Signals
+## 23. Production Readiness, Failure Modes & Model Risk Signals
 
 This section elevates the system from a functional AI project to a **production-grade governed AI system design artifact**, aligned with expectations from senior AI / platform / applied ML roles in FAANG-level environments.
 
 ---
 
-## 23.1 System Failure Mode Analysis (Critical for Production AI Systems)
+## 23.1 System Failure Mode Analysis 
 
 In real-world enterprise deployments, AI system failures rarely occur as complete breakdowns. Instead, they emerge as **subtle degradation patterns**.
 
@@ -397,7 +381,7 @@ In real-world enterprise deployments, AI system failures rarely occur as complet
 
 ---
 
-## 23.2 System Performance Signals (Production Metrics Layer)
+## 23.2 System Performance Signals 
 
 The system is designed to be evaluated not just on correctness, but on **decision stability and governance reliability**.
 
@@ -413,7 +397,7 @@ The system is designed to be evaluated not just on correctness, but on **decisio
 
 ---
 
-## 23.3 Model Risk Signals (FAANG-Level Governance Insight)
+## 23.3 Model Risk Signals 
 
 This system explicitly tracks **model risk indicators**, not just functional outputs.
 
@@ -429,9 +413,9 @@ This system explicitly tracks **model risk indicators**, not just functional out
 
 ---
 
-## 23.4 Production Incident Simulation (System Behaviour Under Failure)
+## 23.4 Production Incident 
 
-### Simulated Incident Type: Risk Under-Detection Event
+### Incident Type: Risk Under-Detection Event
 
 **Scenario:**
 A Jira ticket contains subtle GDPR-sensitive data handling logic embedded in requirements.
@@ -470,7 +454,7 @@ A Jira ticket contains subtle GDPR-sensitive data handling logic embedded in req
 
 ---
 
-## 23.5 Senior-Level Engineering Insight
+## 23.5 Engineering Insight
 
 > In multi-agent AI systems, correctness is not binary — it is distributed across layers of partial truth.
 
@@ -482,7 +466,7 @@ It is:
 
 ---
 
-## 23.6 Why This System is Senior-Level (Not Just Functional)
+## 23.6 System-Level Design Principles
 
 This project demonstrates capabilities expected in senior AI / platform roles:
 
@@ -504,7 +488,7 @@ This project demonstrates capabilities expected in senior AI / platform roles:
 
 ---
 
-## 23.7 Final Senior Signal Statement
+## 23.7 Architectural Priorities Under Real‑World Failure Conditions
 
 > This system is designed under the assumption that AI failures in production are rarely obvious — they are gradual, distributed, and only visible through governance-aware evaluation layers.
 
@@ -517,14 +501,16 @@ Therefore, the architecture prioritises:
 
 ---
 
-## 23.8 Closing Positioning
+## 23.8 Summary of Governance‑Driven Design Approach
 
 This project demonstrates not just AI implementation capability, but:
 
 > **Production-grade AI system design with embedded governance, evaluation, and model risk awareness**
 
-It reflects the thinking style required for:
-- Senior AI Engineer
-- AI Product Lead
-- Applied ML Architect
-- AI Governance / Risk roles in regulated industries
+
+---
+
+## 24. Author
+
+Navjot Perhar  
+AI Systems | FinTech | Risk & Governance AI   

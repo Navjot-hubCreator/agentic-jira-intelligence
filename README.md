@@ -1,69 +1,87 @@
-# Agentic Jira Intelligence System
-AI-powered multi-agent system for Jira intelligence, risk assessment, and execution decisioning in FinTech environments.
-> 
-An AI-powered multi-agent system that analyzes Jira tickets to improve requirement clarity, estimate delivery effort, assess regulatory risk, and drive data-driven execution decisions.
 
-## Key Value Proposition
+# Agentic Jira Intelligence System — Governed Multi-Agent AI Decision Platform
 
-This project simulates a real-world **AI-powered delivery organization**, where multiple specialized agents collaborate to transform unstructured Jira tickets into **structured, decision-ready insights**.
-
-It demonstrates how AI can:
-- Replace manual triage workflows
-- Standardize effort estimation and prioritization
-- Surface regulatory risks early in the lifecycle
-- Enable leadership-level decision-making through structured outputs
 ---
 
-## Overview
+## 1. Executive Summary
 
-This project demonstrates how agent-based AI systems can enhance software delivery workflows by transforming unstructured Jira tickets into structured, decision-ready outputs.
+The Agentic Jira Intelligence System is a **multi-agent AI decision intelligence platform** designed to transform unstructured Jira tickets into structured, execution-ready decisions for FinTech engineering and risk workflows.
 
-The system uses multiple specialized agents to simulate roles typically performed by Business Analysts, Project Managers, Risk Analysts, and Delivery Leads.
+The system simulates a real enterprise delivery environment where AI agents assist in:
+- requirement clarification
+- effort estimation
+- regulatory risk detection
+- prioritisation logic
+- execution recommendation
 
-## Real-World Relevance
+However, this is explicitly designed as a:
 
-This system is directly applicable to enterprise roles such as:
+> **Human-governed decision support system, not an autonomous execution engine**
 
-- AI Product Manager
-- AI Delivery Lead
-- Risk & Compliance Technology Analyst
-- FinTech / RegTech Architect
+All final decisions remain under human accountability.
 
-It demonstrates the ability to:
-- Design multi-agent AI systems
-- Translate business workflows into AI pipelines
-- Build decision intelligence dashboards
-- Bridge engineering, risk, and product functions
 ---
 
-## Problem Statement
+## 2. Key Value Proposition
 
-In most organizations:
+This project demonstrates how AI can move beyond task automation into **structured decision intelligence** by:
+
+- Reducing ambiguity in Jira requirements
+- Standardising effort estimation across teams
+- Surfacing regulatory risks early in SDLC
+- Improving prioritisation consistency
+- Supporting leadership-level decision-making with structured outputs
+
+---
+
+## 3. Real-World Enterprise Relevance
+
+This system is applicable to:
+
+- AI Product Management
+- Delivery Leadership (Engineering / PMO)
+- Risk & Compliance Technology roles
+- FinTech / RegTech transformation teams
+
+It demonstrates:
+- multi-agent system design
+- enterprise workflow modelling
+- structured AI decision pipelines
+- governance-aware AI implementation
+
+---
+
+## 4. Problem Statement
+
+In enterprise engineering environments:
 
 - Jira tickets are often incomplete or ambiguous
-- Effort estimation is manual and inconsistent
-- Regulatory and compliance risks are identified late
-- Prioritization lacks structured decision logic
+- Estimation is inconsistent across teams
+- Risk identification happens too late in SDLC
+- Prioritisation is subjective and non-standardised
 
-This results in delivery delays, increased risk exposure, and inefficient triage processes.
-
----
-
-## Solution
-
-The Agentic Jira Intelligence System introduces a multi-agent architecture that:
-
-- Evaluates requirement clarity
-- Estimates SDLC effort
-- Assesses compliance risks (AML, GDPR, SEC)
-- Scores priority based on business impact
-- Produces a final execution decision
-
-All outputs are presented through a structured dashboard designed for both engineers and leadership stakeholders.
+This leads to:
+- delivery delays
+- compliance exposure
+- misaligned engineering effort
+- poor portfolio visibility
 
 ---
 
-## System Architecture
+## 5. Solution Overview
+
+The system introduces a **multi-agent decision pipeline**:
+
+- Requirement Clarity Agent → refines ambiguous tickets
+- Effort Estimation Agent → provides structured SDLC estimates
+- Risk Agent → evaluates AML / GDPR / SEC exposure
+- Priority Agent → computes business impact scoring
+- Decision Engine → aggregates outputs into execution recommendation
+
+---
+
+## 6. System Architecture
+
 
 
 ```
@@ -133,210 +151,242 @@ Jira Ticket Input
         │ Charts + Metrics             │
         └──────────────────────────────┘
 ```
-## Agent Responsibilities
+## 6.1 Evaluation & Governance Layer (NEW — Production Enhancement)
 
-### Business Analyst Agent
-- Determines requirement clarity
-- Identifies missing information
-- Generates clarification questions
+To ensure this system is not just functional but **governed in a production-realistic manner**, an evaluation layer is introduced above all agent outputs.
 
-### Project Manager Agent
-- Provides SDLC effort estimation
-- Breaks down development lifecycle stages
-- Outputs delivery timeline
+This layer does NOT generate decisions — it evaluates the reliability of decisions produced by agents.
 
-### Risk Agent
-- Evaluates regulatory risks across:
-  - AML (Anti-Money Laundering)
-  - GDPR (Data Privacy)
-  - SEC (Financial Compliance)
+                    ┌──────────────────────────────┐
+                    │ Evaluation & Governance Layer │
+                    │ (Quality + Risk Validator)    │
+                    └──────────────┬───────────────┘
+                                   │
+        ┌──────────────────────────┼──────────────────────────┐
+        ▼                          ▼                          ▼
+┌────────────────┐     ┌──────────────────┐     ┌────────────────────┐
+│ Consistency     │     │ Risk Validator   │     │ Decision Drift     │
+│ Checker         │     │ (AML/GDPR/SEC)   │     │ Detector           │
+└────────────────┘     └──────────────────┘     └────────────────────┘
 
-### Effort Agent
-- Classifies type of engineering work
-- Provides reasoning for categorization
+Evaluation Responsibilities
+1. Consistency Checker
+Detects contradiction between agent outputs
+Flags unstable or conflicting reasoning chains
+2. Risk Validator
+Validates whether risk classification is complete
+Ensures regulatory signals are not missed or underweighted
+3. Decision Drift Detector
+Tracks whether similar Jira inputs produce inconsistent outputs over time
+Identifies instability in prioritisation logic
+Why this layer matters
 
-### Priority Agent
-- Calculates priority score based on:
-  - Regulatory impact
-  - Urgency
-  - Complexity
+Without this layer:
 
-### Decision Engine
-- Aggregates all agent outputs
-- Determines:
-  - Final priority score
-  - Execution complexity
-  - Recommended action
+system appears correct but may be internally inconsistent
+agent outputs can drift without detection
+prioritisation errors remain hidden
 
----
+With this layer:
 
-## Features
+system becomes auditable
+system becomes testable
+system becomes governance-aligned
 
-### Single Ticket Analysis
-- Executive summary
-- Requirement clarity assessment
-- Effort estimation
-- Risk classification
-- Final execution recommendation
+This transforms the system from “multi-agent pipeline” → “governed decision intelligence system”
 
-### Portfolio Analysis
-- Multi-ticket prioritization
-- Portfolio-level visibility
-- Comparative decision support
-
-### Decision Dashboard
-- Structured metrics for leadership
-- Clear separation of risk, effort, and priority
-- Readable output for non-technical stakeholders
 
 ---
 
-## Business Impact
+## 7. Governance Design Principle (Critical)
 
-This system demonstrates measurable improvements in delivery workflows:
+This system is built on a key principle:
 
-- Reduces compliance risk through early-stage detection
-- Improves triage speed by standardizing analysis
-- Enhances requirement quality before development
-- Enables consistent, data-driven prioritization
-- Bridges communication between business, engineering, and risk teams
+> AI structures decisions — it does NOT own decisions.
 
----
+### Allowed:
+- estimation
+- classification
+- risk detection
+- prioritisation suggestion
 
-## Visual Insights
-
-The dashboard includes:
-
-- Priority vs Effort analysis
-- Delivery timeline breakdown
-- Risk classification overview
-
-These visualizations support faster decision-making at both team and portfolio levels.
+### Not allowed:
+- final approval of work
+- enforcement of delivery timelines
+- autonomous execution decisions
 
 ---
 
-## Tech Stack
+## 8. Critical Governance Insight (Production Learning)
+
+During system design and testing, a key risk pattern was identified:
+
+### 🔴 Agent Amplification Risk
+
+Small biases in early-stage agents (e.g. requirement interpretation or effort estimation) can:
+- propagate downstream
+- amplify through prioritisation logic
+- produce confident but skewed execution recommendations
+
+### Why this matters:
+The system may appear consistent and logical, while still producing **systematically distorted decisions**.
+
+---
+
+## 9. Mitigation Controls Introduced
+
+To address this, the system includes:
+
+### 1. Explicit disagreement handling
+- conflicting agent outputs are preserved, not hidden
+
+### 2. Confidence scoring per agent
+- each output includes uncertainty signal
+
+### 3. Human escalation trigger
+- low-confidence or high-disagreement cases require review
+
+---
+
+## 10. Risk Classification
+
+Key risks include:
+- automation bias in decision-making
+- hidden propagation of estimation errors
+- over-reliance on AI prioritisation
+- lack of decision accountability clarity
+- regulatory misclassification of work items
+
+---
+
+## 11. Governance Framework Alignment
+
+- NIST AI RMF (Govern, Map, Measure, Manage)
+- SR 11-7 aligned model risk thinking
+- EU AI Act high-level decision support principles
+- ISO 42001 AI management concepts
+
+---
+
+## 12. AI Lifecycle Governance
+
+### Inception
+- defined as decision support system
+- established human accountability boundary
+
+### Design
+- decomposed enterprise roles into agents
+- structured workflow pipeline design
+
+### Build
+- constrained prompt design
+- structured output enforcement
+
+### Aggregation Layer
+- weighted decision fusion
+- conflict detection logic
+- uncertainty flagging system
+
+---
+
+## 13. Evaluation & Testing
+
+### Independent Testing
+- ambiguous Jira tickets
+- conflicting stakeholder requirements
+- incomplete specifications
+- adversarial or manipulated inputs
+
+### Stress Testing Scenarios
+- requirement inflation
+- contradictory priorities
+- missing acceptance criteria
+- compliance-sensitive tickets
+
+---
+
+## 14. Explainability
+
+Each output includes:
+- agent-level reasoning trace
+- confidence scoring
+- risk classification rationale
+- decision breakdown
+- aggregation logic summary
+
+---
+
+## 15. Control Framework
+
+| Control Type | Implementation |
+|--------------|----------------|
+| Preventive | structured prompts, schema constraints |
+| Detective | logging, disagreement detection |
+| Corrective | human-in-loop override |
+
+---
+
+## 16. Monitoring
+
+- decision drift tracking
+- agent consistency monitoring
+- risk detection evaluation
+- periodic recalibration of scoring logic
+
+---
+
+## 17. Human Accountability Model
+
+Final responsibility always remains with:
+
+> Engineering Lead / Delivery Manager
+
+AI provides structured intelligence only — not authority.
+
+---
+
+## 18. Business Impact
+
+- improved requirement clarity
+- faster triage and prioritisation
+- early detection of regulatory risks
+- consistent effort estimation
+- improved delivery transparency
+
+---
+
+## 19. Future Enhancements
+
+- RAG-based regulatory knowledge grounding
+- Jira API integration for live ingestion
+- advanced portfolio analytics
+- adaptive prioritisation learning layer
+
+---
+
+## 20. Tech Stack
 
 - Python
 - Streamlit
 - Pandas
 - LangChain
-- LLM (Ollama or OpenAI-compatible models)
+- LLMs (OpenAI / Ollama compatible)
 
 ---
 
-## Installation and Setup
-
-### 1. Clone the repository
-git clone https://github.com/Navjot-hubCreator/agentic-jira-intelligence.git
-
-cd agentic-jira-intelligence
-
-
-### 2. Create virtual environment
-
-
-python -m venv venv
-source venv/bin/activate
-
-
-### 3. Install dependencies
-
-
-pip install -r requirements.txt
-
-
-### 4. Run the application
-
-
-streamlit run app.py
-
-
----
-
-## Usage
-
-1. Select analysis mode:
-   - Single Ticket Analysis
-   - Portfolio Analysis
-
-2. Choose a Jira ticket
-
-3. Run AI agents
-
-4. Review:
-   - Executive summary
-   - Decision dashboard
-   - Agent outputs
-
----
-
-## Example Use Case
-
-A banking organization implements this system to:
-
-- Analyze AML-related development tickets
-- Identify regulatory risks early
-- Estimate effort more accurately
-- Prioritize critical compliance work
-
-Result:
-- Improved regulatory readiness
-- Reduced rework
-- Faster delivery cycles
-
----
-## Key Design Decisions
-
-- Used a modular multi-agent architecture to mirror real enterprise workflows
-- Prioritized structured outputs over free-form LLM responses for consistency
-- Avoided RAG in the current version to ensure speed and stability
-- Designed stateless agents for simplicity and scalability
-- Focused UI on executive readability, not just technical output
-
-These decisions ensure:
-- Faster execution
-- Easier debugging
-- Better real-world adoption potential
-
----
-## Future Enhancements
-
-- Retrieval-Augmented Generation (RAG) for regulatory knowledge grounding
-- Integration with Jira APIs for real-time ticket ingestion
-- AI-driven backlog prioritization
-- Voice-based requirement walkthrough for developers
-- Advanced portfolio analytics
-
----
-
-## Limitations
-
-- Relies on prompt-based LLM outputs
-- No persistent data storage
-- Does not integrate with live Jira systems (yet)
-- Risk scoring is heuristic-based
-
----
-
-## Resume Impact
+## 21. Resume Positioning
 
 This project demonstrates:
 
-- End-to-end AI system design
-- Multi-agent orchestration
-- Business + technical alignment
-- Real-world FinTech / Risk use case
-
-Positioning statement:
-
-Built an AI-powered multi-agent system for Jira intelligence, enabling risk-aware prioritization and structured delivery decision-making
-
-## Author
-
-Navjot Perhar  
-AI and Risk Systems | FinTech | Regulatory Technology
+- multi-agent AI system design
+- governed decision intelligence architecture
+- FinTech + regulatory workflow understanding
+- structured AI engineering thinking
+- production-oriented AI governance mindset
 
 ---
 
+## 22. Author
 
+Navjot Perhar  
+AI Systems | FinTech | Risk & Governance AI

@@ -374,3 +374,157 @@ This project demonstrates:
 
 Navjot Perhar  
 AI Systems | FinTech | Risk & Governance AI    
+
+## 23. Senior FAANG Signal Layer — Production Readiness, Failure Modes & Model Risk Signals
+
+This section elevates the system from a functional AI project to a **production-grade governed AI system design artifact**, aligned with expectations from senior AI / platform / applied ML roles in FAANG-level environments.
+
+---
+
+## 23.1 System Failure Mode Analysis (Critical for Production AI Systems)
+
+In real-world enterprise deployments, AI system failures rarely occur as complete breakdowns. Instead, they emerge as **subtle degradation patterns**.
+
+### Key Failure Modes Identified
+
+| Failure Mode | Description | Impact |
+|--------------|-------------|--------|
+| Agent Amplification Drift | Small errors in early agents propagate and amplify downstream | Incorrect prioritisation with high confidence |
+| Silent Risk Under-detection | Risk agent misses or underweights regulatory signals | Compliance exposure (AML/GDPR/SEC) |
+| Aggregation Bias Collapse | Decision engine over-trusts majority agent signal | Systematic decision skew |
+| Context Fragmentation | Jira context inconsistently interpreted across agents | Misaligned effort estimation |
+| Overconfident Outputs | High-confidence outputs without sufficient uncertainty signalling | Automation bias in users |
+
+---
+
+## 23.2 System Performance Signals (Production Metrics Layer)
+
+The system is designed to be evaluated not just on correctness, but on **decision stability and governance reliability**.
+
+### Core Metrics
+
+| Metric | Purpose |
+|--------|--------|
+| Decision Consistency Score | Measures stability of output across similar Jira inputs |
+| Risk Recall Rate | Measures detection of regulatory-relevant tickets |
+| Agent Agreement Index | Measures alignment across BA / PM / Risk agents |
+| Aggregation Variance Score | Detects instability in decision engine output |
+| Confidence Calibration Error | Measures mismatch between confidence and actual correctness |
+
+---
+
+## 23.3 Model Risk Signals (FAANG-Level Governance Insight)
+
+This system explicitly tracks **model risk indicators**, not just functional outputs.
+
+### Key Risk Signals
+
+- increasing disagreement between agents over time
+- rising variance in prioritisation scores for similar tickets
+- drop in risk detection sensitivity
+- increased reliance on single dominant agent signal
+- degradation in explanation coherence
+
+> These signals indicate **governance drift before functional failure occurs**
+
+---
+
+## 23.4 Production Incident Simulation (System Behaviour Under Failure)
+
+### Simulated Incident Type: Risk Under-Detection Event
+
+**Scenario:**
+A Jira ticket contains subtle GDPR-sensitive data handling logic embedded in requirements.
+
+### System Behaviour:
+
+1. BA Agent extracts requirement correctly
+2. PM Agent estimates effort normally
+3. Risk Agent partially detects GDPR exposure (misses edge condition)
+4. Priority Agent assigns standard priority
+5. Decision Engine produces normal execution recommendation
+
+---
+
+### Hidden Failure:
+
+- GDPR risk is underweighted
+- No explicit escalation triggered
+- Output appears valid but is **regulatorially incomplete**
+
+---
+
+### Detection Mechanism (Evaluation Layer Response):
+
+- Risk Completeness Validator flags missing regulatory coverage
+- Confidence divergence detected between agents
+- Decision Drift Detector marks anomaly vs historical patterns
+
+---
+
+### Outcome:
+
+- Ticket escalated for human review
+- System prevents silent compliance failure
+- Incident logged for model recalibration
+
+---
+
+## 23.5 Senior-Level Engineering Insight
+
+> In multi-agent AI systems, correctness is not binary — it is distributed across layers of partial truth.
+
+The real engineering challenge is not:
+- making agents “smart”
+
+It is:
+- ensuring **system-level coherence under uncertainty**
+
+---
+
+## 23.6 Why This System is Senior-Level (Not Just Functional)
+
+This project demonstrates capabilities expected in senior AI / platform roles:
+
+### 1. System Thinking (Not Model Thinking)
+- Treats agents as distributed cognitive components
+- Focuses on system-level failure modes
+
+### 2. Governance-by-Design
+- Evaluation layer is embedded, not external
+- Risk is continuously monitored, not periodically checked
+
+### 3. Production Failure Awareness
+- Explicit modelling of silent failure modes
+- Focus on drift, not just accuracy
+
+### 4. Decision Intelligence Architecture
+- Converts raw tickets → structured decisions
+- Maintains traceability across reasoning layers
+
+---
+
+## 23.7 Final Senior Signal Statement
+
+> This system is designed under the assumption that AI failures in production are rarely obvious — they are gradual, distributed, and only visible through governance-aware evaluation layers.
+
+Therefore, the architecture prioritises:
+
+- consistency over speed
+- traceability over optimisation
+- controlled uncertainty over confident output
+- system-level correctness over individual agent accuracy
+
+---
+
+## 23.8 Closing Positioning
+
+This project demonstrates not just AI implementation capability, but:
+
+> **Production-grade AI system design with embedded governance, evaluation, and model risk awareness**
+
+It reflects the thinking style required for:
+- Senior AI Engineer
+- AI Product Lead
+- Applied ML Architect
+- AI Governance / Risk roles in regulated industries

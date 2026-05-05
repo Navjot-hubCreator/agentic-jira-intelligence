@@ -224,7 +224,7 @@ Without this layer:
 With this layer:
 - system becomes **auditable**
 - system becomes **testable**
-- system becomes **governance-grade**
+- system becomes **production-grade**
 
 ---
 
